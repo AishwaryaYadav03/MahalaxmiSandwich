@@ -1,0 +1,61 @@
+/* Make the image responsive and decrease its height */
+.background-image {
+    width: 100%;
+    height: 83vh; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    position: relative; /* To position the heading on top */
+  }
+
+  /* Style for the heading */
+  /* Center the text in the middle of the screen */
+.animate__animated {
+  position: absolute;
+  top: 50%; /* Position vertically in the center */
+  left: 50%; /* Position horizontally in the center */
+  transform: translate(-50%, -50%); /* Center the text perfectly */
+  color: rgba(254, 255, 250, 0.997); /* White color for visibility */
+  font-size: 4rem; /* Adjust font size as needed */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect to the text */
+  animation: bounceTopToBottom 2s ease-in-out infinite; 
+}
+
+.heading-text {
+  font-size: 4em; /* Adjust as necessary */
+  text-align: center;
+  padding: 10px;
+  /* Optional styling */
+  color: #f5f1f1;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .heading-text {
+    font-size: 1.5em; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 576px) { /* Smaller screens, like mobile */
+  .heading-text {
+    font-size: 1.2em; /* Even smaller font for mobile */
+    padding: 5px;
+  }
+}
+
+
+
+
+
+
+/* Define the custom bounce top to bottom animation */
+@keyframes bounceTopToBottom {
+  0% {
+    transform: translate(-50%, -50%) translateY(-20px); /* Start slightly above */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(20px); /* Move slightly down */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-20px); /* Return to starting position */
+  }
+}
